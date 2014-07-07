@@ -4,18 +4,29 @@
   <title>Recollektion</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% flash.each do |name, msg| %>
-   <% if msg.is_a?(String) %>
-     <%= content_tag :div, msg, :class => "flash_#{name}" %>
+  <% flash.each do |name, msg| %>
+     <% if msg.is_a?(String) %>
+       <%= content_tag :div, msg, :class => "flash_#{name}" %>
+     <% end %>
    <% end %>
- <% end %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <h1><%= link_to 'Recollektion', root_path %></h1>
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> |
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
 
 <%= yield %>
 
