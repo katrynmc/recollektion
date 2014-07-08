@@ -3,6 +3,7 @@ class CreatePreferences < ActiveRecord::Migration
     create_table :preferences do |t|
       t.references :category
       t.references :dependent
+      t.references :user
       t.text :brand
       t.text :product_name
       t.integer :score, index: true
