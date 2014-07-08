@@ -1,3 +1,11 @@
+body {
+  padding-top: 100px;
+
+}
+body .rec_app {
+  background-color: #2980b9;
+
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
