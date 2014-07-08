@@ -4,16 +4,17 @@
   <title>Recollektion</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="row">
     <div class="col-md-12 rec_app">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-      <h1><%= link_to 'Recollektion', root_path %></h1>
-
+      <div class="container-fluid rec_app">
+      <h1 class="rec_app"><%= link_to 'Recollektion', root_path %></h1>
+      <p class="navbar-text navbar-right">
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
           <%= link_to 'Edit profile', edit_user_registration_path %> |
@@ -22,31 +23,33 @@
           <%= link_to "Sign up", new_user_registration_path %> |
           <%= link_to "Login", new_user_session_path %>
         <% end %>
+      </p>
       </nav>
     </div>
   </div>
 </div>
-<div class="container-fluid">
+  <div class="container-fluid rec_app">
     <div class="row">
       <div class="col-md-12">
-
-        <% flash.each do |name, msg| %>
-     <% if msg.is_a?(String) %>
-       <%= content_tag :div, msg, :class => "flash_#{name}" %>
-     <% end %>
-   <% end %>
-   </div>
-  </div>
-<div class="row">
-      <div class="col-md-2">
+        <div class="alert alert-danger" role="alert">
+          <% flash.each do |name, msg| %>
+            <% if msg.is_a?(String) %>
+              <%= content_tag :div, msg, :class => "flash_#{name}" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-md-2 rec_app">
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-8 rec_app">
      <div class="text-center"> <%= link_to 'New preference', new_preference_path %></div>
 <%= yield %>
 </div>
 
-      <div class="col-md-2">
+      <div class="col-md-2 rec_app">
       </div>
 
     </div>
