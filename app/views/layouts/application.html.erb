@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-12 rec_app">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid rec_app">
-      <h1 class="rec_app"><%= link_to 'Recollektion', root_path %></h1>
+    <div class="col-md-12 accent">
+      <nav class="navbar navbar-default navbar-fixed-top accent" role="navigation">
+      <div class="container-fluid accent">
+      <h1 class="accent"><%= link_to 'Recollektion', root_path %></h1>
       <p class="navbar-text navbar-right">
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.

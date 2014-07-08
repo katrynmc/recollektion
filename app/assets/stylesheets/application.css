@@ -2,16 +2,19 @@
 
  body {
   padding-top: 80px;
-
 }
+.accent {
+  background-color: #2980b9;
+}
+
 .rec_app {
   background-color: #ecf0f1;
 }
 
-.rec_app a {
+.accent a {
   color: white;
 }
-.rec_app a:hover {
+.accent a:hover {
   color: white;
   text-decoration: none;
 }
