@@ -44,6 +44,11 @@
   height: 150px;
   width: 100%;
 }
+.preference {
+  width: 33%;
+  margin: 10px;
+  display: inline-block;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
