@@ -1,14 +1,16 @@
 
 
  body {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 .accent {
   background-color: #2980b9;
+
 }
 
 .rec_app {
   background-color: #ecf0f1;
+  z-index: -1;
 }
 
 .accent a {
@@ -17,6 +19,20 @@
 .accent a:hover {
   color: white;
   text-decoration: none;
+}
+.left-triangle {
+background-color: #ecf0f1;
+
+
+  height: 0;
+  width: 0;
+
+  border-top: 200px solid #2980b9;
+  border-right: 2000px solid transparent;
+
+
+
+
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
