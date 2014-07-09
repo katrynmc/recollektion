@@ -1,14 +1,15 @@
 <% if user_signed_in? %>
   <% @preferences.each do |preference| %>
-    <div class="well preference col-md-6">
+    <div class="well preference">
       <%= preference.category %><br>
       <i><%= preference.product_name %></i><br>
       <strong> <%= preference.brand %></strong><br>
       <p><%= preference.comment %></p>
-    </div>
-    <div class="col-md-6">
+
+
       <%= preference.score %><br>
+      </div>
   <% end %>
 <% end %>
-</div>
+
 
