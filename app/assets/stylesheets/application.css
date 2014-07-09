@@ -8,9 +8,15 @@
   background-color: #2980b9;
 
 }
-.shift {
-  top: -400px;
+.beer {
+  top: -450px;
   left: 0px;
+  position: absolute;
+  z-index: 0;
+}
+.books {
+  top: -205px;
+  left: -60px;
   position: absolute;
   z-index: 0;
 }
@@ -43,7 +49,7 @@
   text-decoration: none;
 }
 .preference {
-  width: 33%;
+  width: 25%;
   margin: 10px;
   display: inline-block;
 }
