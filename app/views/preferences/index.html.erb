@@ -1,14 +1,11 @@
 <% if user_signed_in? %>
   <% @preferences.each do |preference| %>
-    <div class="well preference">
-
-
+    <div class="preference">
       <%= preference.category %><br>
-      <h4><i><%= preference.product_name %></i></h4><br>
-      <strong> <%= preference.brand %></strong><br>
-      <hr>
-      <p>Comments<br>
-      <%= preference.comment %></p>
+      <h4><i><%= preference.product_name %></i></h4>
+      <p><strong>Brand </strong>// <%= preference.brand %><br>
+
+      <strong>Comments</strong> // <%= preference.comment %></p>
 <div class="pull-right"><h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4></div>
 </div>
 

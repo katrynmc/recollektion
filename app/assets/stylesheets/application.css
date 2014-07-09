@@ -10,7 +10,7 @@
 }
 .beer {
   top: -450px;
-  left: 0px;
+  left: -120px;
   position: absolute;
   z-index: 0;
 }
@@ -50,8 +50,10 @@
 }
 .preference {
   width: 25%;
-  margin: 10px;
+  margin: 20px;
   display: inline-block;
+  border-left: 1px solid #000;
+  padding-left: 15px;
 }
 .left-triangle {
   height: 0;
