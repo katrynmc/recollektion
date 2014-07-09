@@ -34,6 +34,8 @@
 </div>
 <div class="left-triangle">
 </div>
+
+
   <div class="container-fluid rec_app">
     <div class="row">
       <div class="col-md-12">
@@ -49,12 +51,13 @@
     </div>
   <div class="row">
       <div class="col-md-2">
+      <img class="shift" src="assets/beer.jpg">
       </div>
-
+<div class="line"></div>
       <div class="col-md-8">
 
-     <div class="text-center"> <%= link_to 'New preference', new_preference_path %></div>
-<%= yield %>
+     <div> <%= link_to 'New preference', new_preference_path %></div>
+      <%= yield %>
 </div>
 
       <div class="col-md-2 ">
@@ -65,6 +68,7 @@
 <div class="right-triangle">
 </div>
 <div class="footer">
+<h4><i>Keep track of the things you like, and the things you don't.</i></h4>
 </div>
 </body>
 </html>
