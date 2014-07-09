@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-md-12 accent">
       <nav class="navbar-fixed-top accent" role="navigation">
-      <div class="container-fluid accent">
+      <div class="container accent">
         <span class="title">
         <%= link_to 'Recollektion', root_path %></span>
 
@@ -34,19 +34,21 @@
       </nav>
     </div>
   </div>
-
+<div class="row">
+    <div class="col-md-12 accent">
   <!-- Home page imagery -->
-  <img class="beer" src="assets/beer.jpg">
 
-  <div class="left-triangle">
+
+      <div class="left-triangle">
+      </div>
+
+      <img class="books" src="assets/books1.png">
+
+      <div class="line"></div>
+    </div>
   </div>
-
-  <img class="books" src="assets/books1.png">
-
-  <div class="line"></div>
-
   <!-- Alerts and Error messages -->
-  <div class="container-fluid rec_app">
+  <div class="container rec_app">
 
     <div class="row">
       <div class="col-md-12">
@@ -62,10 +64,10 @@
 
     <!-- Main Content starts here -->
     <div class="row">
+    <img class="pull-right" src="assets/beer.jpg">
       <div class="col-md-12">
 
-        <div class="home-spacer">
-        </div>
+
 
         <div class="btn btn-default"> <%= link_to 'New preference', new_preference_path %>
         </div><br>
@@ -76,14 +78,14 @@
 
     <!-- Footer starts here -->
     <div class="row">
-      <div class="col-md-12">
+
         <div class="footer">
         </div>
         <div class="sub-footer">
           <h4><i>Keep track of the things you like, and the things you don't.</i></h4>
         </div>
       </div>
-    </div>
+
 
   </div>
 </body>

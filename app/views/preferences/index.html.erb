@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <% @preferences.each do |preference| %>
     <div class="preference">
-      <%= preference.category %><br>
+      <%= Category.name %><br>
       <h4><i><%= preference.product_name %></i></h4>
       <p><strong>Brand </strong>// <%= preference.brand %><br>
 

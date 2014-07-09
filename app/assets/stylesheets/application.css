@@ -8,14 +8,10 @@
   background-color: #2980b9;
 
 }
-.beer {
-  top: -450px;
-  left: -120px;
-  position: absolute;
-  z-index: 0;
-}
+
+
 .books {
-  top: -105px;
+  top: -135px;
   left: -245px;
   position: absolute;
   z-index: 0;
@@ -28,7 +24,7 @@
   background-color: #ecf0f1;
 }
 .line {
-  top: 200px;
+  top: 160px;
   left: 0px;
   position: absolute;
   width: 100%;
@@ -52,13 +48,13 @@
   width: 25%;
   margin: 20px;
   display: inline-block;
-  border-left: 1px solid #000;
+  border-left: 2px solid #95a5a6;
   padding-left: 15px;
 }
 .left-triangle {
   height: 0;
   width: 100%;
-  border-top: 450px solid #2980b9;
+  border-top: 452px solid #2980b9;
   position: absolute;
   z-index: 0;
   border-right: 1100px solid transparent;
@@ -70,13 +66,15 @@
   height: 0;
   width: 100%;
   border-left: 1100px solid transparent;
+  margin-bottom: -5px;
 }
 .sub-footer {
   background-color: #2980b9;
   height: 100px;
   margin-top: -5px;
   color: #fff;
-  padding: 20px;
+  padding: 40px;
+
 }
 
 /*
