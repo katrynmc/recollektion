@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :preferences
+  resources :brands
+  resources :items
   resources :categories
 
   root 'preferences#index'

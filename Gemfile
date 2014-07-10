@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'paperclip', '~> 4.2.0'
+gem 'rmagick'
 
 # Testing gems for this project
 

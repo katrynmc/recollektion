@@ -15,7 +15,7 @@ class PreferencesController < ApplicationController
   private
 
   def preference_params
-    params.require(:preference).permit([:brand, :product_name, :score, :comment])
+    params.require(:preference).permit([:score, :comment])
   end
 
 end
