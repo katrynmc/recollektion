@@ -16,10 +16,11 @@ class PreferencesController < ApplicationController
 
   def create
     @category = Category.find(params[:preference][:category])
+    @item = Item.find(params[:preference][:item])
 
     @preference = current_user.preferences.new(preference_params )
     @preference.category = @category
-
+    @preference.item = @item
 
     if @preference.save
       redirect_to root_path

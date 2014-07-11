@@ -4,6 +4,12 @@ class CategoriesController < ApplicationController
      @categories = Category.order(name: :desc)
   end
 
+   def new
+
+    @category = Category.new
+
+  end
+
   private
 
   def category_params
