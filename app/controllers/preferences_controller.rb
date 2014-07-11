@@ -15,14 +15,24 @@ class PreferencesController < ApplicationController
   end
 
   def create
-    @preference = Preference.create( preference_params )
+    @category = Category.find(params[:preference][:category])
+
+    @preference = current_user.preferences.new(preference_params )
+    @preference.category = @category
+
+
+    if @preference.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
 
   private
 
   def preference_params
-    params.permit([:score, :comment, :preference_image ])
+    params.require(:preference).permit([:score, :comment,  :preference_image ])
   end
 
 end

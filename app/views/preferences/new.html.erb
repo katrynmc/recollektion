@@ -23,6 +23,8 @@
   <%= form.label :score %>
   <%= form.text_field :score  %>
   <br>
+  <%= form.select(:category, Category.all.map{ |c| [c.name, c.id] }) %>
+
   <%= form.file_field :preference_image %>
   <!-- Submit the form for a new preference -->
   <%= submit_tag("Submit") %>
