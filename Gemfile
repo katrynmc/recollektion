@@ -42,6 +42,8 @@ gem 'devise'
 gem 'paperclip', '~> 4.2.0'
 gem 'rmagick'
 
+
+
 # Testing gems for this project
 
 group :development, :test do

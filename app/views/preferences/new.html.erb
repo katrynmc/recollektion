@@ -1,3 +1,5 @@
+<!-- Error Messages -->
+
 <% if @preference.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@preference.errors.count, "error") %> prohibited this
@@ -10,24 +12,18 @@
   </div>
 <% end %>
 
-<%= form_for @preference do |f| %>
-  <%= f.label :brand %> <br>
-  <%= f.text_field :brand %>
+<!-- Form for creating a new preference -->
+<%# = render 'users/form1' %>
+
+<!-- Upload image for a preference -->
+<%= form_for @preference, :url => user_preferences_path, :html => { :multipart => true } do |form| %>
+  <%= form.label :comment  %>
+  <%= form.text_field :comment  %>
   <br>
-  <%= f.label :product_name %> <br>
-  <%= f.text_field :product_name %>
+  <%= form.label :score %>
+  <%= form.text_field :score  %>
   <br>
-  <%= f.label :comment %> <br>
-  <%= f.text_field :comment %>
-  <br>
-  <%= f.label :score %> <br>
-  <%= f.text_field :score %>
-  <br>
-  <%= f.label :category_id %> <br>
-  <%= f.text_field :category_id %>
-  <br>
-  <%= f.label :dependent_id %> <br>
-  <%= f.text_field :dependent_id %>
-  <br>
-  <%= f.submit %>
+  <%= form.file_field :preference_image %>
+  <!-- Submit the form for a new preference -->
+  <%= submit_tag("Submit") %>
 <% end %>
