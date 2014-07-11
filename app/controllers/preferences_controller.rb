@@ -9,13 +9,20 @@ class PreferencesController < ApplicationController
   end
 
   def new
+    @category = Category.find(params[:category_id])
     @preference = Preference.new
+
   end
+
+  def create
+    @preference = Preference.create( preference_params )
+  end
+
 
   private
 
   def preference_params
-    params.require(:preference).permit([:score, :comment])
+    params.permit([:score, :comment, :preference_image ])
   end
 
 end

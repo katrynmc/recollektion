@@ -1,0 +1,34 @@
+<%= form_for current_user do |f| %>
+
+    <%= f.fields_for :categories do |categories_form| %>
+
+        <%= categories_form.label :name %>
+        <%= categories_form.text_field :name %>
+
+    <% end %>
+<% preference = current_user.preferences.where(comment: "comment", score: 1..5).first %>
+
+    <%= f.fields_for :preferences do |preferences_form| %>
+
+        <%= preferences_form.label :comment %>
+        <%= preferences_form.text_field :comment %>
+
+        <%= preferences_form.label :score %>
+        <%= preferences_form.text_field :score %>
+
+<%= f.submit %>
+    <% end %>
+
+<% end %>
+<%= form_for current_user do |f| %>
+ <%= f.fields_for :preferences do |preferences_form| %>
+
+        <%= preferences_form.label :comment %>
+        <%= preferences_form.text_field :comment %>
+
+        <%= preferences_form.label :score %>
+        <%= preferences_form.text_field :score %>
+
+<%= f.submit %>
+    <% end %>
+     <% end %>

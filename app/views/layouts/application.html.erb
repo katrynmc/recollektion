@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
   <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -34,15 +35,16 @@
       </nav>
     </div>
   </div>
-<div class="row">
+  <div class="row">
     <div class="col-md-12 accent">
   <!-- Home page imagery -->
 
+     <!-- <img class="books" src="assets/books1.png">
 
       <div class="left-triangle">
-      </div>
+      </div> -->
 
-      <img class="books" src="assets/books1.png">
+
 
       <div class="line"></div>
     </div>
@@ -68,10 +70,13 @@
       <div class="col-md-12">
 
 
-
-        <div class="btn btn-default"> <%= link_to 'New preference', new_preference_path %>
-        </div><br>
-
+  <% if user_signed_in? %>
+    <% category = current_user.categories.where(name: "uncategorized").first%>
+      <div class="btn btn-default"> <%= link_to 'New preference', new_user_category_preference_path(current_user, category, Preference.new) %>
+      </div><br>
+      <div class="btn btn-default"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %>
+      </div>
+<% end %>
         <%= yield %>
       </div>
     </div>
@@ -82,7 +87,7 @@
         <div class="footer">
         </div>
         <div class="sub-footer">
-          <h4><i>Keep track of the things you like, and the things you don't.</i></h4>
+          <h4><i>Keep track of the things you like &mdash; the things you don't.</i></h4>
         </div>
       </div>
 

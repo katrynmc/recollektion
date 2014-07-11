@@ -10,24 +10,9 @@
   </div>
 <% end %>
 
-<%= form_for @preference do |f| %>
-  <%= f.label :brand %> <br>
-  <%= f.text_field :brand %>
-  <br>
-  <%= f.label :product_name %> <br>
-  <%= f.text_field :product_name %>
-  <br>
-  <%= f.label :comment %> <br>
-  <%= f.text_field :comment %>
-  <br>
-  <%= f.label :score %> <br>
-  <%= f.text_field :score %>
-  <br>
-  <%= f.label :category_id %> <br>
-  <%= f.text_field :category_id %>
-  <br>
-  <%= f.label :dependent_id %> <br>
-  <%= f.text_field :dependent_id %>
-  <br>
-  <%= f.submit %>
+<%= render 'users/form1' %>
+
+<%= form_for @preference, :url => user_category_preferences_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :preference_image %>
+  <%= submit_tag("Submit") %>
 <% end %>
