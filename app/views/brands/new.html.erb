@@ -1,0 +1,23 @@
+<!-- Error Messages -->
+
+<% if @brand.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@brand.errors.count, "error") %> prohibited this
+      brand from being saved:</h2>
+    <ul>
+      <% @brand.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @brand, :url => user_brands_path  do |f| %>
+
+  <%= f.label :name  %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>
+
