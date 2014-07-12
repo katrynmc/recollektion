@@ -1,8 +1,15 @@
-<% if user_signed_in? %>
+<h1>
+Current categories</h1>
+<div class="btn btn-default"> <%= link_to 'Create new category', new_user_category_path(current_user, Category.new) %>
+      </div><br>
+      <% if user_signed_in? %>
   <% @categories.each do |category| %>
     <div class="btn btn-default">
       <%= category.name %>
 </div>
-
+<br>
   <% end %>
 <% end %>
+ <% category = current_user.categories.where(name: "uncategorized").first%>
+<div class="btn btn-default"> <%= link_to 'New preference', new_user_preference_path(current_user, category, Preference.new) %>
+</div>
