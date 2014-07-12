@@ -6,10 +6,10 @@ class ItemsController < ApplicationController
 
   def create
 
-    @item = current_user.items.new( item_params )
+    @item = Item.new( item_params )
 
     if @item.save
-      redirect_to root_path
+      redirect_to new_user_preference_path(current_user)
     else
       render :new
     end

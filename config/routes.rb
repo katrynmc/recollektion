@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   resources :users do
     resources :categories
     resources :preferences
-    resources :brands
-    resources :items
   end
+
+  resources :brands
+  resources :items
 
 
 
