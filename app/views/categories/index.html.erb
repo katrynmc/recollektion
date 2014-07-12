@@ -1,12 +1,19 @@
-<h1>
-Current categories</h1>
+<h1>Current categories</h1>
+
 <div class="btn btn-default"> <%= link_to 'Create new category', new_user_category_path(current_user, Category.new) %>
       </div><br>
-      <% if user_signed_in? %>
+
+<% if user_signed_in? %>
   <% @categories.each do |category| %>
     <div class="btn btn-default">
       <%= category.name %>
 </div>
+<%= link_to edit_user_category_path(current_user, category), class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-pencil"></span>
+<% end %>
+<%= link_to user_category_path(current_user, category), method: :delete, class: 'btn btn-default', data: { confirm: 'Delete this category?' } do %>
+  <span class="glyphicon glyphicon-remove"></span>
+<% end %>
 <br>
   <% end %>
 <% end %>
