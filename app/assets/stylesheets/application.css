@@ -1,12 +1,16 @@
-*= require s3_direct_upload_progress_bars
-
- body {
-  padding-top: 80px;
-  background-color: #2980b9;
+*=require s3_direct_upload_progress_bars
+/**/
+.bogus-style {
+  background-color: #fff;
 }
+
 .accent {
   background-color: #2980b9;
 
+}
+body {
+  padding-top: 80px;
+  background-color: #2980b9;
 }
 .white-banner {
   background-color: #ecf0f1;
@@ -62,7 +66,26 @@
     text-decoration: none;
 }
 
+/*category edit buttons*/
+.edit {
+  color: #fff;
+  padding: 8px 22px;
+  background-color: #ecf0f1;
+  display: inline-block;
+  margin: 15px 0px 0px 5px;
+  min-width: 50px;
+  height: 40px;
+  text-align: center;
+}
+.edit a {
+  text-decoration: none;
+  color: #bdc3c7;
+}
 
+.edit a:hover {
+    color: #ecf0f1;
+    text-decoration: none;
+}
 .home-spacer {
   height: 100px;
   background-color: #bdc3c7;

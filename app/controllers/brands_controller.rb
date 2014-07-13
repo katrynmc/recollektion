@@ -13,6 +13,7 @@ class BrandsController < ApplicationController
     else
       render :new
     end
+
   end
 
   private
@@ -20,4 +21,5 @@ class BrandsController < ApplicationController
   def brand_params
       params.require(:brand).permit([:name])
   end
+
 end
