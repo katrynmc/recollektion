@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'paperclip', '~> 4.2.0'
 gem 'rmagick'
+gem 's3_direct_upload' # direct upload form helper and assets
+gem 'aws-sdk' # S3 API
 
 
 

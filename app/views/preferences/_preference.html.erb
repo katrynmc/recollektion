@@ -1,12 +1,21 @@
 <% @preferences.each do |preference| %>
-  <div class="preference">
+<div class="preference">
 
-    <%= preference.category.name %><br>
-    <h4><i><%= preference.item.name %></i></h4>
-    <p><strong>Brand </strong>//<br>
-      <strong>Comments</strong> // <%= preference.comment %></p>
-    <div class="pull-right">
-      <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
-    </div>
+  <div class="pull-right">
+    <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
+    <% if preference.preference_image.exists? %>
+      <%= image_tag preference.preference_image.url(:thumb)%>
+    <% else %>
+    <% end %>
+  </div>
+
+  <h4><i><%= preference.item.name %></i></h4>
+  <p><strong>Brand </strong>//<br>
+    <strong>Comments</strong> // <%= preference.comment %><br>
+
+    <span class="label label-default"><%= preference.category.name %></span>
+
+  </p>
+
   </div>
 <% end %>

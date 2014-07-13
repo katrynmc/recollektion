@@ -1,27 +1,75 @@
-
+*= require s3_direct_upload_progress_bars
 
  body {
-  padding-top: 50px;
+  padding-top: 80px;
   background-color: #2980b9;
 }
 .accent {
   background-color: #2980b9;
 
 }
-
-
-.books {
-  top: -135px;
-  left: -245px;
-  position: absolute;
-  z-index: 0;
+.white-banner {
+  background-color: #ecf0f1;
+  color: #bdc3c7;
+  line-height: 2em;
+  padding-left: 20px;
 }
+
+/*big buttons*/
+.button {
+  color: #fff;
+  padding: 18px 22px;
+  background-color: #3498db;
+  display: inline-block;
+  margin: 15px 0px 0px 5px;
+  width: 155px;
+  height: 80px;
+  text-align: center;
+}
+.button a {
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+.button a:hover {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.darker {
+  background-color: #2980b9;
+}
+.darker-still {
+  background-color: #1c6392;
+}
+/*category buttons*/
+.category {
+  color: #fff;
+  padding: 8px 22px;
+  background-color: #2980b9;
+  display: inline-block;
+  margin: 15px 0px 0px 5px;
+  min-width: 100px;
+  height: 40px;
+  text-align: center;
+}
+.category a {
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+.category a:hover {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+
 .home-spacer {
-  height: 400px;
+  height: 100px;
+  background-color: #bdc3c7;
 
 }
 .rec_app {
-  background-color: #ecf0f1;
+  background-color: #bdc3c7;
 }
 .line {
   top: 160px;
@@ -37,13 +85,16 @@
   font-size: 50px;
   font-family: 'Montserrat', sans-serif;
 }
+
 .accent a {
   color: white;
 }
+
 .accent a:hover {
   color: white;
   text-decoration: none;
 }
+
 .preference {
   width: 25%;
   margin: 20px;
@@ -59,8 +110,8 @@
 }
 
 .footer {
-  background-color: #ecf0f1;
-  border-bottom: 450px solid #2980b9;
+  background-color: #bdc3c7;
+  border-bottom: 450px solid #ecf0f1;
   height: 0;
   width: 100%;
   border-left: 1100px solid transparent;
