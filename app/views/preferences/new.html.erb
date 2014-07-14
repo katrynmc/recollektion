@@ -1,3 +1,4 @@
+<div class="home-spacer"></div>
 <!-- Error Messages -->
 
 <% if @preference.errors.any? %>
@@ -16,18 +17,28 @@
 <%# = render 'users/form1' %>
 
 <!-- Upload image for a preference -->
-<%= form_for @preference, :url => user_preferences_path, :html => { :multipart => true } do |form| %>
-  <%= form.label :comment  %>
-  <%= form.text_field :comment  %>
-  <br>
-  <%= form.label :score %>
-  <%= form.text_field :score  %>
-  <br>
-  <%= form.select(:item, Item.all.map{ |i| [i.name, i.id] }) %>
-  <br>
-  <%= form.select(:category, Category.all.map{ |c| [c.name, c.id] }) %>
-  <br>
-  <%= form.file_field :preference_image %>
+<div class="row">
+  <div class="col-md-3 "></div>
+  <div class="col-md-6 ">
+  <h1 class="white-banner">Rate your item</h1>
+    <%= form_for @preference, :url => user_preferences_path, :html => { :multipart => true } do |form| %>
+      <%= form.label :comment  %><br>
+      <%= form.text_field :comment  %><br>
+      <br>
+      <%= form.label :score %><br>
+      <%= form.text_field :score  %><br>
+      <br>
+
+      <%= form.select(:item, Item.all.map{ |i| [i.name, i.id] }) %><br>
+      <br>
+      <%= form.select(:category, Category.all.map{ |c| [c.name, c.id] }) %><br>
+      <br>
+      <%= form.file_field :preference_image %><br>
   <!-- Submit the form for a new preference -->
-  <%= submit_tag("Submit") %>
-<% end %>
+      <%= submit_tag("Submit") %>
+      <% end %>
+    </div>
+  <div class="col-md-3 "></div>
+</div>
+<div class="home-spacer"></div>
+
