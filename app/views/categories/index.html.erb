@@ -10,10 +10,11 @@
 
 <% if user_signed_in? %>
   <% @categories.each do |category| %>
+  <hr>
     <div class="category">
       <%= category.name %>
     </div>
-
+<div class="pull-right">
     <div class="edit">
       <%= link_to user_category_path(current_user, category), method: :delete, data: { confirm: 'Delete this category?' } do %>
         <span class="glyphicon glyphicon-remove"></span>
@@ -24,6 +25,7 @@
       <span class="glyphicon glyphicon-pencil"></span>
       </div><br>
     <% end %>
+</div>
 
   <% end %>
 <% end %>
