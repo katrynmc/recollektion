@@ -1,5 +1,7 @@
 class Document < ActiveRecord::Base
 
+  belongs_to :user
+
   # Environment-specific direct upload url verifier screens for malicious posted upload locations.
   DIRECT_UPLOAD_URL_FORMAT = %r{\Ahttps:\/\/s3\.amazonaws\.com\/myapp#{!Rails.env.production? ? "\\-#{Rails.env}" : ''}\/(?<path>uploads\/.+\/(?<filename>.+))\z}.freeze
 

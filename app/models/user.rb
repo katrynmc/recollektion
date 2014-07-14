@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   after_create :create_uncategorized
 
   has_many :preferences
+  has_many :documents
   has_many :categories
 
   accepts_nested_attributes_for :preferences

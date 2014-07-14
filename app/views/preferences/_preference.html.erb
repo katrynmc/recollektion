@@ -6,6 +6,7 @@
     <% if preference.preference_image.exists? %>
       <%= image_tag preference.preference_image.url(:thumb)%>
     <% else %>
+    <%= image_tag 'https://s3.amazonaws.com/recollektionmedia-development/preferences/preference_images/54/thumb/Screen_Shot_2012-07-28_at_10.19.10_PM.png' %>
     <% end %>
   </div>
 
