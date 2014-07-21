@@ -29,6 +29,12 @@ class PreferencesController < ApplicationController
     end
   end
 
+  def destroy
+    @preference = Preference.find(params[:id])
+    @preference.destroy!
+    flash[:success] = 'Preference deleted.'
+    redirect_to root_path
+  end
 
   private
 

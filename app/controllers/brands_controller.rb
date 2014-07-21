@@ -5,15 +5,12 @@ class BrandsController < ApplicationController
   end
 
   def create
-
     @brand = Brand.new( brand_params )
-
     if @brand.save
       redirect_to new_item_path
     else
       render :new
     end
-
   end
 
   private
