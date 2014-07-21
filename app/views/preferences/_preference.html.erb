@@ -4,14 +4,14 @@
   <div class="pull-right">
     <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
     <% if preference.preference_image.exists? %>
-      <%= image_tag preference.preference_image.url(:thumb)%>
+      <%= image_tag preference.preference_image.url %>
     <% else %>
     <%= image_tag 'https://s3.amazonaws.com/recollektionmedia-development/preferences/preference_images/54/thumb/Screen_Shot_2012-07-28_at_10.19.10_PM.png' %>
     <% end %>
   </div>
 
   <h4><i><%= preference.item.name %></i></h4>
-  <p><strong>Brand </strong>// <%= preference.item.brand.name %><br>
+  <p><strong>Brand </strong>// <br>
     <strong>Comments</strong> // <%= preference.comment %><br>
 
     <span class="label label-default"><%= preference.category.name %></span>

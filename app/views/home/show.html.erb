@@ -1,35 +1,30 @@
+<% if user_signed_in? %>
+
 <div class="row">
 
   <div class="col-md-5">
-  <% if user_signed_in?
-   @category = current_user.categories.where(name: "uncategorized").first %>
+      <%= @category = current_user.categories.where(name: "uncategorized").first %>
       <%= render 'categories/category' %>
-   <% end %>
   </div>
 
   <div class="col-md-7">
-
-  <% if user_signed_in? %>
-      <h4 class="button darker-still pull-right"> <%= link_to 'View all categories', user_categories_path(current_user) %>
-      </h4>
-      <h4 class="button darker pull-right"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %>
-      </h4>
-      <h4 class="button pull-right"> <%= link_to 'New preference', new_brand_path %>
-      </h4>
-
+      <h4 class="button darker-still pull-right"> <%= link_to 'View all categories', user_categories_path(current_user) %></h4>
+      <h4 class="button darker pull-right"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %></h4>
+      <h4 class="button pull-right"> <%= link_to 'New preference', new_brand_path %></h4>
       <br>
-
   </div>
 
 </div>
 
-
 <div class="row">
-      <div class="col-md-12">
-      <h1 class="white-banner">A few of my favorite things</h1>
-  <%= render 'preferences/preference' %>
+
+  <div class="col-md-12">
+    <h1 class="white-banner">A few of my favorite things</h1>
+    <%= render 'preferences/preference' %>
+  </div>
+
 </div>
-      </div>
+
 <% end %>
 
 
