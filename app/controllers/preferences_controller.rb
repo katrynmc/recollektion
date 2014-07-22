@@ -27,6 +27,18 @@ class PreferencesController < ApplicationController
     end
   end
 
+  def edit
+    @preference = Preference.find(params[:id])
+  end
+
+  def update
+    @preference = Preference.find(params[:id])
+
+    if @preference.update(preference_params)
+      redirect_to user_preferences_path, notice: "You have updated your preference #{@preference.item.name}"
+    end
+  end
+
   def destroy
     @preference = Preference.find(params[:id])
     @preference.destroy!

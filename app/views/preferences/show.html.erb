@@ -6,7 +6,11 @@
     <h4><%= @preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
     <p><strong>Comments</strong> // <%= @preference.comment %></p>
     <p><span class="label label-default"><%= @preference.category.name %></span></p>
-
+    <div class="edit">
+      <%= link_to edit_user_preference_path(current_user, @preference) do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+    </div><br>
+    <% end %>
     <div class="edit">
       <%= link_to user_preference_path(current_user, @preference), method: :delete, data: { confirm: 'Delete this preference?' } do %>
         <span class="glyphicon glyphicon-remove"></span>

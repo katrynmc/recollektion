@@ -11,6 +11,11 @@
   <span class="label label-default"><%= preference.category.name %></span>
   </p>
   <div class="edit">
+      <%= link_to edit_user_preference_path(current_user, preference) do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+  </div>
+    <% end %>
+  <div class="edit">
     <strong><%= link_to "VIEW", user_preference_path(current_user, preference) %></strong>
   </div>
 
