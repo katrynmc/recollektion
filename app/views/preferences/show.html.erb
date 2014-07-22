@@ -1,13 +1,16 @@
-<% if preference.preference_image.exists? %>
-  <%= image_tag preference.preference_image.url(:thumb)%>
-<% else %>
-<% end %>
-<h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
-<h4><i><%= preference.item.name %></i></h4>
-<p><strong>Brand </strong>//<br>
-  <strong>Comments</strong> // <%= preference.comment %><br>
-<span class="label label-default"><%= preference.category.name %></span>
-</p>
+<h2><i><%= @preference.item.name %></i></h2>
+<h4><strong>Brand </strong>//</h4>
+<h4><%= @preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
 
+
+<p><strong>Comments</strong> // <%= @preference.comment %></p>
+<p><span class="label label-default"><%= @preference.category.name %></span></p>
+
+<div class="edit">
+  <%= link_to user_preference_path(current_user, @preference), method: :delete, data: { confirm: 'Delete this preference?' } do %>
+  <span class="glyphicon glyphicon-remove">delete</span>
+  <% end %>
 </div>
+
+
 

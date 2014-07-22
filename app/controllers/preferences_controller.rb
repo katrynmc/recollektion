@@ -9,9 +9,7 @@ class PreferencesController < ApplicationController
   end
 
   def new
-
     @preference = Preference.new
-
   end
 
   def create

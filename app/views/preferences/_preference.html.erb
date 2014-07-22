@@ -3,20 +3,21 @@
 
   <div class="pull-right">
     <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
-
   </div>
 
-  <h4><i><%= preference.item.name %></i></h4>
+  <h4><%= preference.item.name %></h4>
   <p><strong>Brand </strong>// <br>
-    <strong>Comments</strong> // <%= preference.comment %><br>
-
-    <span class="label label-default"><%= preference.category.name %></span>
-
+  <strong>Comments</strong> // <%= preference.comment %><br>
+  <span class="label label-default"><%= preference.category.name %></span>
   </p>
   <div class="edit">
-      <%= link_to user_preference_path(current_user, preference), method: :delete, data: { confirm: 'Delete this preference?' } do %>
-        <span class="glyphicon glyphicon-remove">delete</span>
-      <% end %>
+    <strong><%= link_to "VIEW", user_preference_path(current_user, preference) %></strong>
   </div>
+
+  <div class="edit">
+    <%= link_to user_preference_path(current_user, preference), method: :delete, data: { confirm: 'Delete this preference?' } do %>
+      <span class="glyphicon glyphicon-remove"></span>
+    <% end %>
   </div>
+</div>
 <% end %>

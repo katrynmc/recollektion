@@ -48,12 +48,12 @@ body {
 /*category buttons*/
 .category {
   color: #fff;
-  padding: 8px 22px;
+  padding: 5px 22px;
   background-color: #2980b9;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 100px;
-  height: 40px;
+  height: 30px;
   text-align: center;
 }
 .category a {
@@ -69,12 +69,12 @@ body {
 /*category edit buttons*/
 .edit {
   color: #fff;
-  padding: 8px 22px;
+  padding: 5px 22px;
   background-color: #ecf0f1;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 50px;
-  height: 40px;
+  height: 30px;
   text-align: center;
 }
 .edit a {
