@@ -9,26 +9,28 @@
 
 }
 body {
-  padding-top: 80px;
+  padding-top: 70px;
   background-color: #2980b9;
 }
 .white-banner {
   background-color: #ecf0f1;
   color: #bdc3c7;
-  line-height: 2em;
+  line-height: 1.95em;
   padding-left: 20px;
+  margin: 15px 0px 0px 5px;
 }
 
 /*big buttons*/
 .button {
   color: #fff;
-  padding: 18px 22px;
-  background-color: #3498db;
+  padding: 14px 22px;
+  background-color: #ecf0f1;
   display: inline-block;
   margin: 15px 0px 0px 5px;
-  width: 155px;
-  height: 80px;
-  text-align: center;
+  width: 135px;
+  height: 70px;
+  letter-spacing: 0.0325em;
+
 }
 .button a {
   text-decoration: none;
@@ -36,25 +38,23 @@ body {
 }
 
 .button a:hover {
-    color: #ecf0f1;
+    color: #2980b9;
     text-decoration: none;
 }
-.darker {
-  background-color: #2980b9;
-}
-.darker-still {
-  background-color: #1c6392;
-}
+
 /*category buttons*/
 .category {
   color: #fff;
   padding: 5px 22px;
-  background-color: #2980b9;
+  background-color: #737495;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 100px;
   height: 30px;
+  font-weight: bold;
   text-align: center;
+  letter-spacing: 0.0325em;
+
 }
 .category a {
   text-decoration: none;
@@ -87,7 +87,12 @@ body {
     text-decoration: none;
 }
 .home-spacer {
-  height: 100px;
+  height: 150px;
+  background-color: #bdc3c7;
+
+}
+.home-spacer2 {
+  height: 25px;
   background-color: #bdc3c7;
 
 }
@@ -119,12 +124,11 @@ body {
 }
 
 .preference {
-  width: 25%;
-  margin: 20px;
+  width: 200px;
+  margin: 10px;
   display: inline-block;
-  border-left: 2px solid #95a5a6;
-  padding-left: 15px;
 }
+
 .left-triangle {
   height: 0;
   width: 100%;
