@@ -15,15 +15,16 @@ body {
 .white-banner {
   background-color: #ecf0f1;
   color: #bdc3c7;
-  line-height: 1.95em;
-  padding-left: 20px;
+  line-height: 1.55em;
+  padding-top: 10px;
+  padding-left: 10px;
   margin: 15px 0px 0px 5px;
 }
 
 /*big buttons*/
 .button {
   color: #fff;
-  padding: 14px 22px;
+  padding: 0px 22px;
   background-color: #ecf0f1;
   display: inline-block;
   margin: 15px 0px 0px 5px;
@@ -92,7 +93,7 @@ body {
 
 }
 .home-spacer2 {
-  height: 25px;
+  height: 05px;
   background-color: #bdc3c7;
 
 }
