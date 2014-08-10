@@ -1,12 +1,25 @@
 
-
 .accent {
-  background-color: #2980b9;
+  background-color: rgba(0,0,0,0.75);
+}
+.home-spacer {
+  height: 80px;
+  background-color: #F7EFDE;
+}
+.home-spacer2 {
+  height: 5px;
+  background-color: #bdc3c7;
 
 }
+.rec_app {
+  background-color: #fff;
+}
 body {
-  padding-top: 70px;
   background-color: #2980b9;
+}
+.home-image img {
+  max-width: 100%;
+  min-width: 100%;
 }
 .white-banner {
   background-color: #ecf0f1;
@@ -84,19 +97,7 @@ body {
     color: #7f8c8d;
     text-decoration: none;
 }
-.home-spacer {
-  height: 150px;
-  background-color: #bdc3c7;
 
-}
-.home-spacer2 {
-  height: 05px;
-  background-color: #bdc3c7;
-
-}
-.rec_app {
-  background-color: #bdc3c7;
-}
 .line {
   top: 160px;
   left: 0px;
@@ -143,13 +144,15 @@ body {
   margin-bottom: -5px;
 }
 .sub-footer {
-  background-color: #2980b9;
-  height: 100px;
+  background-color: #000;
+  height: 150px;
   margin-top: -5px;
   color: #fff;
   padding: 40px;
 
 }
+
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
