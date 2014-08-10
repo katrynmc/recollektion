@@ -1,9 +1,5 @@
 
 
-.bogus-style {
-  background-color: #fff;
-}
-
 .accent {
   background-color: #2980b9;
 
@@ -40,6 +36,7 @@ body {
 
 .button a:hover {
     color: #2980b9;
+    width: 100px;
     text-decoration: none;
 }
 

@@ -1,22 +1,29 @@
 <div class="row">
+
   <div class="col-md-3 "></div>
+
   <div class="col-md-6 ">
     <h2><i><%= @preference.item.name %></i></h2>
     <h4><strong>Brand </strong>//</h4>
     <h4><%= @preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
     <p><strong>Comments</strong> // <%= @preference.comment %></p>
     <p><span class="label label-default"><%= @preference.category.name %></span></p>
+
     <div class="edit">
       <%= link_to edit_user_preference_path(current_user, @preference) do %>
       <span class="glyphicon glyphicon-pencil"></span>
-    </div><br>
-    <% end %>
+      <% end %>
+    </div>
+
+
     <div class="edit">
       <%= link_to user_preference_path(current_user, @preference), method: :delete, data: { confirm: 'Delete this preference?' } do %>
         <span class="glyphicon glyphicon-remove"></span>
       <% end %>
     </div>
+
   </div>
+
   <div class="col-md-3 "></div>
 
 </div>

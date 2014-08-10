@@ -1,0 +1,60 @@
+<div class="home-spacer2"></div>
+
+<!-- Error Messages -->
+<% if @preference.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@preference.errors.count, "error") %> prohibited this
+      preference from being saved:</h2>
+    <ul>
+      <% @preference.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<!-- Form for creating a new preference -->
+<div class="row">
+
+  <div class="col-md-3 "></div>
+
+  <div class="col-md-6 ">
+
+    <h1 class="white-banner">Update your item</h1>
+    <div class="home-spacer2"></div>
+
+    <%= form_for @preference, :url => user_preferences_path, :html => { :multipart => true } do |form| %>
+
+    <%= form.label :category %><br>
+    <%= form.select(:category, Category.all.map{ |c| [c.name, c.id] }) %><br>
+    <br>
+    <%= form.label :brand %><br>
+    <%= form.select(:brand, Brand.all.map{ |b| [b.name, b.id] }) %>
+    <br>
+    <br>
+    <%= form.label :item %><br>
+    <%= form.select(:item, Item.all.map{ |i| [i.name, i.id] }) %>
+    <br>
+    <br>
+    <!-- Upload image for a preference -->
+    <%= form.file_field :preference_image %>
+    <br>
+    <%= form.label :comment  %><br>
+    <%= form.text_field :comment  %>
+    <br>
+    <br>
+    <%= form.label :score %><br>
+    <%= form.text_field :score  %>
+    <br>
+    <br>
+    <!-- Submit the form for a new preference -->
+    <%= submit_tag("Submit") %>
+    <% end %>
+  </div>
+
+  <div class="col-md-3 "></div>
+
+</div>
+
+<div class="home-spacer"></div>
+

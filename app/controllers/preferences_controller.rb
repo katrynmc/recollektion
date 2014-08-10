@@ -1,7 +1,7 @@
 class PreferencesController < ApplicationController
 
   def index
-     @preferences = Preference.order(score: :desc).limit(18)
+     @preferences = Preference.order(score: :desc)
   end
 
   def show
@@ -16,7 +16,7 @@ class PreferencesController < ApplicationController
     @category = Category.find(params[:preference][:category])
     @item = Item.find(params[:preference][:item])
 
-    @preference = current_user.preferences.new(preference_params )
+    @preference = current_user.preferences.new(preference_params)
     @preference.category = @category
     @preference.item = @item
 
@@ -35,7 +35,7 @@ class PreferencesController < ApplicationController
     @preference = Preference.find(params[:id])
 
     if @preference.update(preference_params)
-      redirect_to user_preferences_path, notice: "You have updated your preference #{@preference.item.name}"
+      redirect_to user_preferences_path(current_user), notice: "You have updated your preference #{@preference.item.name}"
     end
   end
 
