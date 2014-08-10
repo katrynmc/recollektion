@@ -33,9 +33,13 @@ class PreferencesController < ApplicationController
 
   def update
     @preference = Preference.find(params[:id])
+    @preference.update(preference_params)
 
-    if @preference.update(preference_params)
-      redirect_to user_preferences_path(current_user), notice: "You have updated your preference #{@preference.item.name}"
+    if @preference.save
+      flash[:notice] = "Your preference was succesfully updated"
+      redirect_to(@preference)
+    else
+      render :edit
     end
   end
 
@@ -49,7 +53,7 @@ class PreferencesController < ApplicationController
   private
 
   def preference_params
-    params.require(:preference).permit([:score, :comment,  :preference_image ])
+    params.require(:preference).permit([:score, :comment, :preference_image, :category_id])
   end
 
 end

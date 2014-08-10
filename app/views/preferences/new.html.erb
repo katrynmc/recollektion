@@ -36,12 +36,26 @@
       <%= form.label :comment  %><br>
       <%= form.text_field :comment  %><br>
       <br>
-      <%= form.label :score %><br>
-      <%= form.text_field :score  %><br>
+
+    <br>
+    <%= label_tag :score %><br>
+
+    <%= form.label :score, "1", :value => "1"  %>
+    <%= form.radio_button :score, 1 %>
+    <%= form.label :score, "2", :value => "2"  %>
+    <%= form.radio_button :score, 2 %>
+    <%= form.label :score, "3", :value => "3"  %>
+    <%= form.radio_button :score, 3 %>
+    <%= form.label :score, "4", :value => "4"  %>
+    <%= form.radio_button :score, 4 %>
+    <%= form.label :score, "5", :value => "5"  %>
+    <%= form.radio_button :score, 5 %>
+
+<br>
       <br>
   <!-- Submit the form for a new preference -->
       <%= submit_tag("Submit") %>
-      <% end %>
+  <% end %>
     </div>
   <div class="col-md-3 "></div>
 </div>
