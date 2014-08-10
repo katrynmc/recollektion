@@ -1,0 +1,17 @@
+
+<div class="row white-banner">
+
+  <div class="col-md-6">
+  <h2><%= @category.name.capitalize %></h2>
+</div>
+
+  <div class="col-md-6">
+
+    <h4 class="button pull-right"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %></h4>
+    <h4 class="button pull-right"> <%= link_to 'New preference', new_brand_path %></h4>
+    <h4 class="button pull-right"> <%= link_to 'View categories', user_categories_path(current_user) %></h4>
+    <br>
+  </div>
+
+</div>
+  <%= render 'preferences/preference' %>
