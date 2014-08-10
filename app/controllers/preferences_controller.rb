@@ -2,10 +2,12 @@ class PreferencesController < ApplicationController
 
   def index
      @preferences = Preference.order(score: :desc)
+
   end
 
   def show
     @preference = Preference.find(params[:id])
+
   end
 
   def new
@@ -19,6 +21,7 @@ class PreferencesController < ApplicationController
     @preference = current_user.preferences.new(preference_params)
     @preference.category = @category
     @preference.item = @item
+    @item.brand = @brand
 
     if @preference.save
       redirect_to root_path
@@ -33,11 +36,14 @@ class PreferencesController < ApplicationController
 
   def update
     @preference = Preference.find(params[:id])
+
     @preference.update(preference_params)
+
+
 
     if @preference.save
       flash[:notice] = "Your preference was succesfully updated"
-      redirect_to(@preference)
+      redirect_to user_preference_path(current_user, @preference.id)
     else
       render :edit
     end

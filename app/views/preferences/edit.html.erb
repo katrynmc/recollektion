@@ -23,7 +23,7 @@
     <h1 class="white-banner">Update your item</h1>
     <div class="home-spacer2"></div>
 
-    <%= form_for @preference, :url => user_preference_path, :html => { :multipart => true } do |form| %>
+    <%= form_for @preference, :url => user_preference_path(current_user, @preference.id), :html => { :multipart => true } do |form| %>
 
     <%= form.label :category %><br>
     <%= form.select(:category, Category.all.map{ |c| [c.name, c.id] }) %><br>
@@ -42,7 +42,7 @@
     <%= form.label :comment  %><br>
     <%= form.text_field :comment  %>
     <br>
-    Working at all?!?!?!!
+
     <br>
      <%= label_tag :score %><br>
 
