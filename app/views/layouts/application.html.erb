@@ -17,8 +17,7 @@
     <div class="col-md-12 ">
       <nav class="navbar-fixed-top" role="navigation">
       <div class="container-fluid accent">
-        <span class="title">
-        <%= link_to 'Recollektion', root_path %></span>
+        <span class="title"><%= link_to 'Recollektion', root_path %></span>
 
         <span class="navbar-right">
           <% if user_signed_in? %>
@@ -26,21 +25,20 @@
             <%= link_to 'Edit profile', edit_user_registration_path %> |
             <%= link_to "Logout", destroy_user_session_path, method: :delete %>
           <% else %>
-            <%= link_to "Sign up", new_user_registration_path %> |
-            <%= link_to "Login", new_user_session_path %>
+            <button type="button" class="btn btn-med" id="login"><%= link_to "Sign up", new_user_registration_path %> </button>
+            <button type="button" class="btn btn-med" id="login"><%= link_to "Login", new_user_session_path %></button>
           <% end %>
         </span>
 
-      </div>
       </nav>
+    <div class="home-image"><%= image_tag("reco-home.png") %></div>
+
     </div>
-
-
     <div class="rec_app">
 
     <!-- Alerts and Error messages -->
     <div class="row">
-      <div class="col-md-12">
+
         <% flash.each do |name, msg| %>
           <div class="alert alert-danger" role="alert">
             <% if msg.is_a?(String) %>
@@ -48,20 +46,22 @@
             <% end %>
           </div>
         <% end %>
-      </div>
+
     </div>
+
   <!-- Main Content starts here -->
   <div class="container-fluid">
     <%= yield %>
   </div>
-    <div class="home-spacer"> </div>
+
 
     <!-- Footer starts here -->
     <div class="row sub-footer">
       <div class="col-md-12">
 
-          <p>Keep track of everything you like &mdash; and everything you don't.</p>
-          <p>Created by Katryn McIntosh / General Assembly &ndash; Web Development Immersive</p>
+
+          <p>Created by Katryn McIntosh <br>
+          Project 1 // GA &ndash; Web Development Immersive</p>
 
       </div>
     </div>
