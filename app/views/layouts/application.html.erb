@@ -31,26 +31,25 @@
         </span>
 
       </nav>
-    <div class="home-image"><%= image_tag("reco-home.png") %></div>
+      <div class="row">
+      <div class="home-image"><%= image_tag("reco-home.png") %></div>
+      </div>
+      <div class="rec_app">
+      <!-- Alerts and Error messages -->
+        <div class="row">
 
-    </div>
-    <div class="rec_app">
+          <% flash.each do |name, msg| %>
+            <div class="alert alert-danger" role="alert">
+              <% if msg.is_a?(String) %>
+                <%= content_tag :div, msg, :class => "flash_#{name}" %>
+              <% end %>
+            </div>
+          <% end %>
 
-    <!-- Alerts and Error messages -->
-    <div class="row">
-
-        <% flash.each do |name, msg| %>
-          <div class="alert alert-danger" role="alert">
-            <% if msg.is_a?(String) %>
-              <%= content_tag :div, msg, :class => "flash_#{name}" %>
-            <% end %>
-          </div>
-        <% end %>
-
-    </div>
+        </div>
 
   <!-- Main Content starts here -->
-  <div class="container-fluid">
+
     <%= yield %>
   </div>
 
