@@ -24,6 +24,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
+    @preferences = Preference.where(category_id: @category.id)
   end
 
   def update
@@ -47,7 +49,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-      params.require(:category).permit([:name])
+      params.require(:category).permit([:name, :id])
   end
 
   def find_category
