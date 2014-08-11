@@ -44,6 +44,7 @@ gem 'rmagick'
 
 gem 'aws-sdk' # S3 API
 
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 # Testing gems for this project
