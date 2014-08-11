@@ -1,6 +1,6 @@
 
 .accent {
-  background-color: rgba(15,51,165,0.90);
+  background-color: rgba(15, 165, 93, 0.9);
 }
 .home-spacer {
   height: 80px;
@@ -31,21 +31,20 @@ body {
 .white-banner {
   background-color: #FAFAFA;
   color: #0F33A5;
-  line-height: 1.55em;
-  padding-top: 10px;
-  padding-left: 10px;
-  margin: 15px 0px 0px 5px;
+  display: inline-block;
+  height: 70px;
 }
+
 
 /*big buttons*/
 .button {
   color: #fff;
   padding: 0px 22px;
-  background-color: #ecf0f1;
+  background-color: #FAFAFA;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   width: 135px;
-  height: 70px;
+  height: 40px;
   letter-spacing: 0.0325em;
 
 }
@@ -88,7 +87,7 @@ body {
 .edit {
   color: #fff;
   padding: 5px 22px;
-  background-color: #ecf0f1;
+  background-color: #FAFAFA;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 50px;
