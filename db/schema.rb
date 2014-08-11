@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713184035) do
+ActiveRecord::Schema.define(version: 20140811152038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,21 +28,6 @@ ActiveRecord::Schema.define(version: 20140713184035) do
     t.datetime "updated_at"
     t.integer  "user_id"
   end
-
-  create_table "documents", force: true do |t|
-    t.integer  "user_id",                             null: false
-    t.string   "direct_upload_url",                   null: false
-    t.string   "upload_file_name"
-    t.string   "upload_content_type"
-    t.integer  "upload_file_size"
-    t.datetime "upload_updated_at"
-    t.boolean  "processed",           default: false, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "documents", ["processed"], name: "index_documents_on_processed", using: :btree
-  add_index "documents", ["user_id"], name: "index_documents_on_user_id", using: :btree
 
   create_table "items", force: true do |t|
     t.text     "name"
