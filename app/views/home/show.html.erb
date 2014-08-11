@@ -1,69 +1,66 @@
-<div class="row">
-
-  <!--Introduction to the site -->
-
-  <div class="home-spacer text-center">
-    <p class="tag-line">Keep track of <i>everything</i> you like &mdash; and everything you don't.</p>
-  </div>
-
-  <div class="col-md-4 text-center symbols">
-    <%= image_tag("camera.png", :class => "img-rounded") %><br>
-    <br>
-    <p class="lead">Upload images <br>of the products and <br>services you try.</p>
-  </div>
-
-  <div class="col-md-4 text-center symbols">
-    <%= image_tag("grid.png", :class => "img-rounded") %><br>
-    <br>
-    <p class="lead">Group experiences into<br>custom categories. Track <br>what's important to you.</p>
-  </div>
-
-  <div class="col-md-4 text-center symbols">
-    <%= image_tag("heart.png", :class => "img-rounded") %><br>
-    <br>
-    <p class="lead">Rate your experiences. <br>Recall the ones you love and <br>avoid the ones you don't.</p>
-  </div>
-
-</div>
-
 <!--Logged in user view -->
 
 <% if user_signed_in? %>
 
-<div class="row">
+  <div class="row">
+    <div class="home-spacer2"></div>
+
+    <div class="col-md-12">
+        <%= @category = current_user.categories.where(name: "uncategorized").first %>
+        <%= render 'categories/category' %>
+    </div>
+
+  </div>
   <div class="home-spacer2"></div>
+  <div class="home-spacer2"></div>
+  <div class="row white-banner">
 
-  <div class="col-md-12">
-      <%= @category = current_user.categories.where(name: "uncategorized").first %>
-      <%= render 'categories/category' %>
+    <div class="col-md-6">
+      <h2>A few of my favorite things</h2>
+    </div>
+
+    <div class="col-md-6">
+      <h4 class="button pull-right"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %></h4>
+      <h4 class="button pull-right"> <%= link_to 'New preference', new_brand_path %></h4>
+      <h4 class="button pull-right"> <%= link_to 'View categories', user_categories_path(current_user) %></h4>
+      <br>
+    </div>
+
   </div>
 
-</div>
-<div class="home-spacer2"></div>
-<div class="home-spacer2"></div>
-<div class="row white-banner">
-
-  <div class="col-md-6">
-    <h2>A few of my favorite things</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'preferences/preference' %>
+    </div>
   </div>
+<% end %>
+<% if user_signed_in? == false %>
+  <!--Introduction to the site -->
+  <div class="row">
 
-  <div class="col-md-6">
-    <h4 class="button pull-right"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %></h4>
-    <h4 class="button pull-right"> <%= link_to 'New preference', new_brand_path %></h4>
-    <h4 class="button pull-right"> <%= link_to 'View categories', user_categories_path(current_user) %></h4>
-    <br>
+    <div class="home-spacer text-center">
+      <p class="tag-line">Keep track of <i>everything</i> you like &mdash; and everything you don't.</p>
+    </div>
+
+    <div class="col-md-4 text-center symbols">
+      <%= image_tag("camera.png", :class => "img-rounded") %><br>
+      <br>
+      <p class="lead">Upload images <br>of the products and <br>services you try.</p>
+    </div>
+
+    <div class="col-md-4 text-center symbols">
+      <%= image_tag("grid.png", :class => "img-rounded") %><br>
+      <br>
+      <p class="lead">Group experiences into<br>custom categories. Track <br>what's important to you.</p>
+    </div>
+
+    <div class="col-md-4 text-center symbols">
+      <%= image_tag("heart.png", :class => "img-rounded") %><br>
+      <br>
+      <p class="lead">Rate your experiences. <br>Recall the ones you love and <br>avoid the ones you don't.</p>
+    </div>
+
   </div>
-
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <%= render 'preferences/preference' %>
-  </div>
-</div>
-<else>
-
-
 <% end %>
 
 

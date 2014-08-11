@@ -21,16 +21,17 @@
 
         <span class="navbar-right">
           <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+            <div class="login-nav">Logged in as <strong><%= current_user.email %></strong>
+            <button type="button" class="btn btn-med" id="login"><%= link_to 'Edit profile', edit_user_registration_path %> </button>
+            <button type="button" class="btn btn-med" id="login"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button>
+            </div>
+
           <% else %>
-
-
-
-
+          <div class="login-nav">
             <button type="button" class="btn btn-med" id="login"><%= link_to "Sign up", new_user_registration_path %> </button>
             <button type="button" class="btn btn-med" id="login"><%= link_to "Login", new_user_session_path %></button>
+          </div>
           <% end %>
         </span>
 
