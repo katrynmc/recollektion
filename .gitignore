@@ -16,3 +16,5 @@
 /tmp
 
 /config/aws.yml
+
+.env
