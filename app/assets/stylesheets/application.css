@@ -30,7 +30,7 @@ body {
 }
 .white-banner {
   background-color: #FAFAFA;
-  color: #0F33A5;
+  color: #bdc3c7;
   display: inline-block;
   height: 70px;
 }
@@ -63,7 +63,7 @@ body {
 .category {
   color: #bdc3c7;
   padding: 5px 22px;
-  background-color: #0F33A5;
+  background-color: #F85E50;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 100px;
@@ -150,7 +150,7 @@ body {
   margin-bottom: -5px;
 }
 .sub-footer {
-  background-color: #000;
+  background-color: #FAFAFA;
   height: 150px;
   margin-top: -5px;
   color: #757578;
