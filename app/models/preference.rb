@@ -4,7 +4,7 @@ class Preference < ActiveRecord::Base
   belongs_to :item
   belongs_to :brand
   has_attached_file :preference_image, styles: {
-    thumb: '100x100>',
+    thumb: '250x100#',
     square: '200x200#',
     medium: '300x300>'
   }

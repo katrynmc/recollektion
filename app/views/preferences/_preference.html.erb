@@ -3,7 +3,7 @@
 
   <div class="pull-right">
     <% if preference.preference_image.exists? %>
-      <%= image_tag preference.preference_image.url(:medium) %>
+      <%= image_tag preference.preference_image.url(:thumb) %>
     <% end %>
     <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
   </div>
