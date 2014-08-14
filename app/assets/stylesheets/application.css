@@ -82,6 +82,31 @@ body {
     color: #ecf0f1;
     text-decoration: none;
 }
+.category-large {
+  color: #bdc3c7;
+  padding: 8px 10px;
+  background-color: #F85E50;
+  display: inline-block;
+  margin-top: 4px;
+  width: 49%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+
+  letter-spacing: 0.0525em;
+}
+.category-large a {
+  text-decoration: none;
+  color: #fff;
+}
+.category-large a:hover {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.pencil {
+  margin-right: 5px;
+  padding-top: 5px;
+}
 
 /*category edit buttons*/
 .edit {
@@ -89,8 +114,8 @@ body {
   padding: 5px 22px;
   background-color: #FAFAFA;
   display: inline-block;
-  margin: 15px 0px 0px 5px;
-  min-width: 50px;
+  margin-top: 15px;
+  width: 49%;
   height: 30px;
   text-align: center;
 }
@@ -103,7 +128,9 @@ body {
     color: #7f8c8d;
     text-decoration: none;
 }
-
+.update {
+  display: inline-block;
+}
 .line {
   top: 160px;
   left: 0px;

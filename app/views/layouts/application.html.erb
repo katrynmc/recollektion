@@ -38,19 +38,7 @@
     </div> <!-- End row -->
 
 
-      <!-- Alerts and Error messages -->
-    <div class="row">
-      <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <% flash.each do |name, msg| %>
-            <div class="alert alert-danger" role="alert">
-              <% if msg.is_a?(String) %>
-                <%= content_tag :div, msg, :class => "flash_#{name}" %>
-              <% end %>
-            </div>
-          <% end %>
-      <div class="col-md-1"></div>
-    </div>
+
 
   <!-- Main Content starts here -->
 

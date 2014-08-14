@@ -1,38 +1,54 @@
+
 <div class="row">
-  <div class="col-md-3 "></div>
-  <div class="col-md-6 ">
-    <h1 class="white-banner">Current categories</h1>
-    <% category = current_user.categories.where(name: "uncategorized").first %>
+<% category = current_user.categories.where(name: "uncategorized").first %><br>
+  <div class="col-sm-1 white-banner"></div>
+
+  <div class="col-sm-6 white-banner">
+    <h1>Current categories</h1>
+  </div>
+
+  <div class="col-sm-4 white-banner">
     <h4 class="button"> <%= link_to 'New category', new_user_category_path(current_user, Category.new) %>
-      </h4>
-      <h4 class="button pull-right"> <%= link_to 'New preference', new_user_preference_path(current_user, category, Preference.new) %>
-</h4><br>
+    </h4>
+    <h4 class="button"> <%= link_to 'New preference', new_user_preference_path(current_user, category, Preference.new) %>
+    </h4>
+  </div>
 
-<% if user_signed_in? %>
-  <% @categories.each do |category| %>
-  <hr>
-    <div class="category">
-      <%= category.name %>
-    </div>
-<div class="pull-right">
-    <div class="edit">
-      <%= link_to user_category_path(current_user, category), method: :delete, data: { confirm: 'Delete this category?' } do %>
-        <span class="glyphicon glyphicon-remove"></span>
-      <% end %>
-    </div>
-    <div class="edit">
-      <%= link_to edit_user_category_path(current_user, category) do %>
-      <span class="glyphicon glyphicon-pencil"></span>
-      </div><br>
-    <% end %>
+  <div class="col-sm-1 white-banner"></div>
 </div>
-
+<div class="home-spacer2"></div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-danger" role="alert">
+      <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg, :class => "flash_#{name}" %>
+      <% end %>
+      </div>
   <% end %>
-<% end %>
+    <% if user_signed_in? %>
+      <% @categories.each do |category| %>
+        <div class="category-large">
+          <%= link_to category.name, user_category_path(current_user, category.id) %>
+          <%= link_to user_category_path(current_user, category), method: :delete, data: { confirm: 'Delete this category?' } do %>
+            <span class="glyphicon glyphicon-remove pull-right pencil"></span>
+          <% end %>
+        <%= link_to edit_user_category_path(current_user, category) do %>
+          <span class="glyphicon glyphicon-pencil pull-right pencil"></span>
+        <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-1"></div>
+
+
+</div>
 
 
 </div>
   <div class="col-md-3 "></div>
 </div>
-<div class="home-spacer"></div>
+<div class="home-spacer2"></div>
 
