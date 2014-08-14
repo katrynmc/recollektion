@@ -4,7 +4,7 @@
    <span class="label label-default pull-right"><%= preference.category.name %></span></h4>
   <div class="pull-right">
     <% if preference.preference_image.exists? %>
-      <%= image_tag preference.preference_image.url(:thumb) %>
+      <%= image_tag preference.preference_image.url(:thumb) %><br>
     <% end %>
 
   </div>
