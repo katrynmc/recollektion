@@ -12,7 +12,21 @@ class BrandsController < ApplicationController
       render :new
     end
   end
+  def edit
+    @brand = Brand.find(params[:id])
+  end
 
+  def update
+    @brand = Brand.find(params[:id])
+    @Brand.update(brand_params)
+
+    if @brand.save
+      flash[:notice] = "Your brand name was succesfully updated"
+      redirect_to :back
+    else
+      render :edit
+    end
+  end
   private
 
   def brand_params

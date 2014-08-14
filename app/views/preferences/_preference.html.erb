@@ -2,7 +2,9 @@
 <div class="preference">
 
   <div class="pull-right">
-  <%= image_tag preference.preference_image.url(:medium) %>
+    <% if preference.preference_image.exists? %>
+      <%= image_tag preference.preference_image.url(:medium) %>
+    <% end %>
     <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span></h4>
   </div>
 

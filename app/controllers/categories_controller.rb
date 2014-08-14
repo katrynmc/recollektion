@@ -21,6 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    @category = Category.find(params[:id])
   end
 
   def show
@@ -33,7 +34,7 @@ class CategoriesController < ApplicationController
 
     if @category.save
       flash[:success] = 'Category updated.'
-      redirect_to root_path
+      redirect_to :back
     else
       render :edit
     end

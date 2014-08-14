@@ -36,10 +36,7 @@ class PreferencesController < ApplicationController
 
   def update
     @preference = Preference.find(params[:id])
-
     @preference.update(preference_params)
-
-
 
     if @preference.save
       flash[:notice] = "Your preference was succesfully updated"
