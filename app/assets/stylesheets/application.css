@@ -63,7 +63,7 @@ body {
 .category {
   color: #bdc3c7;
   padding: 5px 22px;
-  background-color: #F85E50;
+  background-color: #777;
   display: inline-block;
   margin: 15px 0px 0px 5px;
   min-width: 100px;
@@ -76,16 +76,18 @@ body {
 .category a {
   text-decoration: none;
   color: #fff;
+
 }
 
 .category a:hover {
     color: #ecf0f1;
     text-decoration: none;
+
 }
 .category-large {
   color: #bdc3c7;
   padding: 8px 10px;
-  background-color: #F85E50;
+  background-color: #0F33A5;
   display: inline-block;
   margin-top: 4px;
   width: 49%;

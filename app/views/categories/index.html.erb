@@ -1,10 +1,13 @@
-
 <div class="row">
-<% category = current_user.categories.where(name: "uncategorized").first %><br>
+  <div class="home-image"><%= image_tag("reco-home2.png") %></div>
+</div>
+<% category = current_user.categories.where(name: "uncategorized").first %>
+<div class="row">
+
   <div class="col-sm-1 white-banner"></div>
 
   <div class="col-sm-6 white-banner">
-    <h1>Current categories</h1>
+    <h2>Current categories</h2>
   </div>
 
   <div class="col-sm-4 white-banner">
@@ -14,7 +17,7 @@
     </h4>
   </div>
 
-  <div class="col-sm-1 white-banner"></div>
+  <div class="col-sm-1 home-spacer"></div>
 </div>
 <div class="home-spacer2"></div>
 <div class="row">

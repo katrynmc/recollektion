@@ -4,15 +4,12 @@
    <span class="label label-default pull-right"><%= preference.category.name %></span></h4>
   <div class="pull-right">
     <% if preference.preference_image.exists? %>
-      <%= image_tag preference.preference_image.url(:thumb) %><br>
+      <%= link_to image_tag(preference.preference_image.url(:thumb)), user_preference_path(current_user, preference) %><br>
     <% end %>
-
   </div>
-
   <h4><%= preference.item.name %></h4>
-  <p><strong>Brand  </strong><br>
+  <p><strong>Brand</strong><br>
   <strong>Comments</strong> <br> <%= preference.comment %><br>
-
   </p>
 
   <div class="edit">
