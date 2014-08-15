@@ -1,10 +1,10 @@
 <% @preferences.each do |preference| %>
 <div class="preference">
   <h4><%= preference.score %> <span class="glyphicon glyphicon-star"></span>
-   <span class="label label-default pull-right"><%= preference.category.name %></span></h4>
+   <span class="label label-purple pull-right"><%= preference.category.name %></span></h4>
   <div class="pull-right">
     <% if preference.preference_image.exists? %>
-      <%= link_to image_tag(preference.preference_image.url(:thumb)), user_preference_path(current_user, preference) %><br>
+      <div class="index-image"><%= link_to image_tag(preference.preference_image.url(:thumb)), user_preference_path(current_user, preference) %></div><br>
     <% end %>
   </div>
   <h4><%= preference.item.name %></h4>
