@@ -1,22 +1,22 @@
-<div class="home-spacer"></div>
-
-<!-- Error Messages -->
-
-<% if @brand.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@brand.errors.count, "error") %> prohibited this
-      brand from being saved:</h2>
-    <ul>
-      <% @brand.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<div class="home-spacer2"></div>
 <div class="row">
   <div class="col-md-3 "></div>
+
   <div class="col-md-6 ">
-  <h1 class="white-banner"> Enter a brand</h1>
+    <div class="home-spacer2"></div>
+    <% if @brand.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+        <h4><strong><%= pluralize(@brand.errors.count, "error") %> prohibited this brand from being saved:</strong></h4>
+        <ul><% @brand.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  <h1 class="tag-line"> Enter a brand</h1>
     <%= form_for @brand, :url => brands_path  do |f| %>
       <h1><%= f.text_field :name %></h1>
       <%= f.submit %>
@@ -24,4 +24,5 @@
   </div>
   <div class="col-md-3 "></div>
 </div>
-<div class="home-spacer"></div>
+<div class="home-spacer2"></div>
+<div class="home-spacer2"></div>
