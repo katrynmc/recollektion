@@ -2,7 +2,7 @@
   <div class="col-md-3"></div>
   <div class="col-md-6">
     <h2>Sign in</h2>
-
+<div class="home-spacer2"></div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div><%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %></div>
@@ -19,4 +19,8 @@
 
       <%= render "users/shared/links" %>
   </div>
+  <div class="col-md-3"></div>
 </div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
